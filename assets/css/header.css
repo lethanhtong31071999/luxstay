@@ -1,0 +1,480 @@
+/* Header */
+.header {
+  height: var(--header-height);
+  border-bottom: 1px solid #eee;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.header__container {
+  display: flex;
+  height: 100%;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.header__menu-mobile {
+  display: none;
+}
+
+.header__logo-slider {
+  display: none;
+}
+
+.header--left,
+.heade--right {
+  flex: 1;
+}
+
+.header--left {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.header__logo {
+  margin-right: 15px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  position: relative;
+}
+
+.header__logo::before {
+  display: block;
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.header__logo:hover::before {
+  background-color: var(--primary-color);
+}
+
+.header__logo-img {
+  z-index: 1;
+}
+
+.header__reservation {
+  height: 50px;
+  border-radius: 6px;
+  border: 2px solid #eee;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.header__search-logo {
+  display: inline-block;
+  font-size: 14px;
+  padding: 0 15px;
+  line-height: 50px;
+  color: #919191;
+}
+
+.header__search {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  padding-right: 15px;
+  position: relative;
+}
+
+.header__search:after {
+  display: block;
+  content: "";
+  position: absolute;
+  right: 0px;
+  height: 70%;
+  top: 50%;
+  bottom: 50%;
+  border-right: 1px solid #ccc;
+  transform: translateY(-50%);
+}
+
+.header__search.active:after {
+  display: none;
+}
+
+.header__search.active {
+  border: 2px solid #e0e0e0;
+  box-shadow: -1px 1px 1px 2px #e0e0e0;
+}
+
+.header__search-input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+}
+
+.header__search-input::placeholder {
+  color: #999;
+  font-size: 1rem;
+}
+
+.header__number-of-customer,
+.header__calendar {
+  width: 150px;
+  padding: 14px 16px;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  border-radius: 6px;
+  position: relative;
+}
+
+.header__calendar::after {
+  display: block;
+  content: "";
+  position: absolute;
+  right: 0px;
+  height: 70%;
+  top: 50%;
+  bottom: 50%;
+  border-right: 1px solid #ccc;
+  transform: translateY(-50%);
+}
+
+.header__number-of-customer-title,
+.header__calendar-title {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 14px;
+}
+
+.header__icon-search {
+  background-color: #555555;
+  display: flex;
+  align-items: center;
+  margin: 0 5px;
+  border-radius: 7px;
+  height: 70%;
+  padding: 5px 20px;
+}
+
+.header__icon-search:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.header__icon-search-icon {
+  color: white;
+}
+
+.header__number-of-customer-table {
+  min-width: 320px;
+  background-color: white;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  border-radius: 5px;
+  transform: translateX(-50%);
+  position: relative;
+  box-shadow: 0 0 1px 1px rgba(244, 244, 244, 1);
+  border: 1px solid #ebeef5;
+
+  z-index: 10;
+  padding: 15px;
+  animation: showTable 0.3s ease-in-out;
+  display: none;
+}
+
+@keyframes showTable {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0%);
+  }
+}
+
+.header__number-of-customer-table::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -20px;
+  width: 100%;
+  height: 20px;
+  background-color: transparent;
+}
+
+.header__types-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__type-item {
+  display: flex;
+  padding: 15px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__type-name {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.header__type-action {
+  display: flex;
+  align-items: center;
+}
+
+.header__type-action .header__type-action-number {
+  display: inline-block;
+  padding: 0 20px;
+  cursor: text;
+}
+
+.header__type-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f7fa;
+  cursor: pointer;
+}
+
+.header__type-btn.header__type-btn--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.header__type-btn > i {
+  font-size: 16px;
+  color: grey;
+}
+
+.header__type-footer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__delete-action {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.header__apply-action {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--primary-color);
+}
+
+.header__number-of-customer:hover .header__number-of-customer-table {
+  display: block;
+}
+
+/* Right Header */
+.header--right {
+}
+
+.header__action {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__action-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.header__action-item {
+  display: block;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.header__action-item:hover {
+  color: var(--primary-color);
+}
+
+.header__action-item > p {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.header__action-item.header__action-item--active > p {
+  color: var(--primary-color);
+}
+
+.header__currency {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.header__currency-container {
+  padding: 7px;
+  border-radius: 2rem;
+  display: flex;
+  background-color: #f6f6f6;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__currency-icon {
+  width: 1.5rem;
+}
+
+.header__currency-name {
+  margin: 0 7px;
+  font-size: 1rem;
+}
+
+.header__currency-icon-img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.header__currency:hover .header__currency-table {
+  display: flex;
+}
+
+.header__currency-table {
+  position: absolute;
+  background-color: white;
+  top: calc(100% + 10px);
+  padding: 20px;
+  width: 470px;
+  box-shadow: 0 0 1px 1px rgba(244, 244, 244, 1);
+  border: 1px solid #ebeef5;
+  /* display: flex; */
+  display: none;
+  animation: showCurrencyTable 0.35s ease-out;
+  z-index: 10;
+}
+
+@keyframes showCurrencyTable {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.header__currency-table::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  border-width: 10px 16px;
+  border-style: solid;
+  border-color: transparent transparent var(--primary-color) transparent;
+  transform: translateX(-50%);
+}
+
+.header__currency-table::after {
+  display: block;
+  content: "";
+  height: 80%;
+  width: 1px;
+  background: #ccc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header__curency-coin,
+.header__curency-languages {
+  flex: 1;
+}
+
+.header__curency-coin-list,
+.header__languages-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__currency-coin-item,
+.header__language-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.header__language-item--active {
+  color: var(--primary-color);
+}
+
+.header__language-img {
+  height: 20px;
+  width: 20px;
+  margin-right: 14px;
+}
+
+.header__language-img > img {
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.header__language-title {
+  font-size: 1rem;
+  font-weight: 400;
+  transition: all 0.25s ease;
+}
+
+.header__currency-coin-item:hover,
+.header__language-item:hover .header__language-title {
+  color: var(--primary-color);
+}
+
+.header__currency-coin-item > span {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-right: 10px;
+}
+
+.header__currency-coin-item {
+  padding-left: 20px;
+}
+
+.header__currency-coin-item--active {
+  color: var(--primary-color);
+}
+
+.header__currency-coin-item > p {
+  font-weight: 400;
+  font-size: 1.1rem;
+}

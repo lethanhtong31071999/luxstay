@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font icon -->
+    <link rel="stylesheet" href="./assets/icons/fontawesome-free-5.15.4-web/css/all.css">
+
+    <!-- Link css -->
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/slider.css">
+    <link rel="stylesheet" href="./assets/css/introduction.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
+    <title>Lux Stay Clone</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- Start Header Section -->
+        <header id="header" class="header">
+            <div class="header__container">
+                <div class="header--left">
+                    <div class="header__logo hmb">
+                        <svg class="header__logo-img" version="1.1" viewBox="0 0 50 50" class="svg-icon svg-fill"
+                            style="width: 50px; height: 50px;">
+                            <path pid="0"
+                                d="M25.093 0c13.781.06 24.94 11.317 24.882 25.106C49.917 38.894 38.663 50.058 24.88 50 11.1 49.942-.059 38.683.001 24.894.057 11.106 11.31-.058 25.092 0zm11.801 31.9L14.398 16.053c.241-.26.48-.518.74-.777 2.7-2.687 5.971-4.031 9.775-4.015 3.804.015 7.064 1.388 9.741 4.098.238.241.476.482.694.743l-5.951 4.133 2.381 1.688 5.153-3.576v.02L39.33 16.7c-.692-1.203-1.584-2.325-2.616-3.39-3.231-3.292-7.167-4.947-11.788-4.967-4.6-.019-8.53 1.603-11.809 4.867a17.806 17.806 0 00-2.682 3.408l1.429 1.004 23.429 16.51c-.24.26-.48.518-.74.777-2.7 2.687-5.971 4.011-9.775 3.996-3.803-.016-7.063-1.37-9.74-4.08-.258-.26-.496-.521-.734-.782l6.111-4.251-.139-.181-2.183-1.528-5.373 3.735v-.021l-2.377 1.65a17.824 17.824 0 002.654 3.43c3.253 3.291 7.169 4.946 11.769 4.965 4.62.021 8.549-1.602 11.83-4.866 1.06-1.075 1.96-2.21 2.682-3.406l-2.383-1.67z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="header__reservation">
+                        <div class="header__search">
+                            <i class="fas fa-search header__search-logo"></i>
+                            <input type="text" name="search" id="search" class="header__search-input"
+                                placeholder="Tìm kiếm">
+                        </div>
+                        <div class="header__calendar hmb">
+                            <i class="far fa-calendar header__calendar-icon"></i>
+                            <input class="header__calendar-input" type="date" hidden>
+                            <span class="header__calendar-title">Ngày</span>
+                        </div>
+                        <div class="header__number-of-customer hmb">
+                            <div>
+                                <i class="far fa-user header__number-of-customer-icon"></i>
+                                <span class="header__number-of-customer-title">Số khách</span>
+                            </div>
+                            <div class="header__number-of-customer-table">
+                                <ul class="header__types-list">
+                                    <li class="header__type-item">
+                                        <span class="header__type-name">Người lớn</span>
+                                        <div class="header__type-action">
+                                            <div class="header__type-btn header__type-btn--disabled">
+                                                <i class="fas fa-minus"></i>
+                                            </div>
+                                            <span class="header__type-action-number">0</span>
+                                            <div class="header__type-btn">
+                                                <i class="fas fa-plus"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="header__type-item">
+                                        <span class="header__type-name">Trẻ em</span>
+                                        <div class="header__type-action">
+                                            <div class="header__type-btn header__type-btn--disabled">
+                                                <i class="fas fa-minus"></i>
+                                            </div>
+                                            <span class="header__type-action-number">0</span>
+                                            <div class="header__type-btn">
+                                                <i class="fas fa-plus"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="header__type-item">
+                                        <span class="header__type-name">Trẻ sơ sinh</span>
+                                        <div class="header__type-action">
+                                            <div class="header__type-btn header__type-btn--disabled">
+                                                <i class="fas fa-minus"></i>
+                                            </div>
+                                            <span class="header__type-action-number">0</span>
+                                            <div class="header__type-btn">
+                                                <i class="fas fa-plus"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="header__type-footer">
+                                    <span class="header__delete-action">Xóa</span>
+                                    <span class="header__apply-action">Áp dụng</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="header__icon-search hmb">
+                            <i class="fas fa-search header__icon-search-icon"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="header__menu-mobile">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="header--right">
+                    <div class="header__logo-slider">
+                        <div class="header__header-container">
+                            <div class="header__logo">
+                                <svg class="header__logo-img" version="1.1" viewBox="0 0 50 50"
+                                    class="svg-icon svg-fill" style="width: 50px; height: 50px;">
+                                    <path pid="0"
+                                        d="M25.093 0c13.781.06 24.94 11.317 24.882 25.106C49.917 38.894 38.663 50.058 24.88 50 11.1 49.942-.059 38.683.001 24.894.057 11.106 11.31-.058 25.092 0zm11.801 31.9L14.398 16.053c.241-.26.48-.518.74-.777 2.7-2.687 5.971-4.031 9.775-4.015 3.804.015 7.064 1.388 9.741 4.098.238.241.476.482.694.743l-5.951 4.133 2.381 1.688 5.153-3.576v.02L39.33 16.7c-.692-1.203-1.584-2.325-2.616-3.39-3.231-3.292-7.167-4.947-11.788-4.967-4.6-.019-8.53 1.603-11.809 4.867a17.806 17.806 0 00-2.682 3.408l1.429 1.004 23.429 16.51c-.24.26-.48.518-.74.777-2.7 2.687-5.971 4.011-9.775 3.996-3.803-.016-7.063-1.37-9.74-4.08-.258-.26-.496-.521-.734-.782l6.111-4.251-.139-.181-2.183-1.528-5.373 3.735v-.021l-2.377 1.65a17.824 17.824 0 002.654 3.43c3.253 3.291 7.169 4.946 11.769 4.965 4.62.021 8.549-1.602 11.83-4.866 1.06-1.075 1.96-2.21 2.682-3.406l-2.383-1.67z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span>LUX STAY</span>
+                        </div>
+
+                        <div class="header__close-menu">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="header__action">
+                        <ul class="header__action-list">
+                            <li class="header__action-item">
+                                <p>Hướng dẫn</p>
+                            </li>
+                            <li class="header__action-item header__action-item--active">
+                                <p>Chủ phòng</p>
+                            </li>
+                            <li class="header__action-item">
+                                <p>Đăng ký</p>
+                            </li>
+                            <li class="header__action-item">
+                                <p>Đăng nhập</p>
+                            </li>
+                        </ul>
+                        <div class="header__currency">
+                            <div class="header__currency-container">
+                                <div class="header__currency-icon">
+                                    <img src="./assets/images/vn-currency-logo.svg" alt="VN"
+                                        class="header__currency-icon-img">
+                                </div>
+                                <span class="header__currency-name">VND</span>
+                                <i class="fas fa-caret-down"></i>
+                            </div>
+                            <div class="header__currency-table">
+                                <div class="header__curency-languages">
+                                    <ul class="header__languages-list">
+                                        <li class="header__language-item header__language-item--active">
+                                            <div class="header__language-img">
+                                                <img src="./assets/images/vn-currency-logo.svg" alt="VN">
+                                            </div>
+                                            <p class="header__language-title">Tiếng Việt</p>
+                                        </li>
+                                        <li class="header__language-item">
+                                            <div class="header__language-img">
+                                                <img src="./assets/images/korean-currency-logo.svg" alt="KR">
+                                            </div>
+                                            <p class="header__language-title">Korean</p>
+                                        </li>
+                                        <li class="header__language-item">
+                                            <div class="header__language-img">
+                                                <img src="./assets/images/uk-currency-logo.svg" alt="UK">
+                                            </div>
+                                            <p class="header__language-title">English</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="header__curency-coin">
+                                    <ul class="header__curency-coin-list">
+                                        <li class="header__currency-coin-item header__currency-coin-item--active">
+                                            <span>VND</span>
+                                            <p>Việt Nam Đồng</p>
+                                        </li>
+                                        <li class="header__currency-coin-item">
+                                            <span>USD</span>
+                                            <p>United States Dollar</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End Header Section -->
+
+        <section class="body" id="body">
+            <!-- Start Slide Bar Section -->
+            <div class="slide-bar">
+                <div class="slide-container">
+                    <div class="slider__imgs">
+                        <img src="./assets/images/slider/img1.png" alt="img1">
+                        <img src="./assets/images/slider/img2.png" alt="img1">
+                    </div>
+                    <div class="slider__imgs-btn">
+                        <span class="active">
+                            <i class="fas fa-circle"></i>
+                        </span>
+                        <span>
+                            <i class="fas fa-circle"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- End Slide Bar Section -->
+
+            <!-- Start Section Introduction -->
+            <section class="introduction">
+                <h2 class="introduction__title">Chào mừng đến với Luxstay!</h2>
+                <p class="introduction__content">Đặt chỗ ở, homestay, cho thuê xe, trải nghiệm và nhiều hơn nữa trên
+                    Luxstay</p>
+                <p class="introduction__sub-content"><a>Đăng nhập</a> hoặc <a>Đăng ký</a> để trải nghiệm !</p>
+            </section>
+            <!-- End Section Introduction -->
+
+            <!-- Start Section Featured -->
+            <section class="feature">
+                <div class="feature__header">
+                    <h2 class="main-title">Địa điểm nổi bật</h2>
+                    <p class="main-title__content">Cùng Luxstay bắt đầu chuyến hành trình chinh phục thế giới của bạn
+                    </p>
+                </div>
+                <div class="feature__container-img">
+                    <ul class="feature__imgs-list">
+                        <div class="row">
+                            <div class="col-5-item">
+                                <li class="feature__img-item">
+                                    <img src="./assets/images/feature/hanoi.png" alt="HN">
+                                    <div class="feaature__img-info">
+                                        <h2 class="feature__img-city">Hà Nội</h2>
+                                        <p class="feature__img-accommodation">
+                                            2811 Chỗ ở
+                                        </p>
+                                    </div>
+                                </li>
+                            </div>
+                            <div class="col-5-item">
+                                <li class="feature__img-item">
+                                    <img src="./assets/images/feature/tphcm.png" alt="TPHCM">
+                                    <div class="feaature__img-info">
+                                        <h2 class="feature__img-city">TPHCM</h2>
+                                        <p class="feature__img-accommodation">
+                                            2811 Chỗ ở
+                                        </p>
+                                    </div>
+                                </li>
+                            </div>
+                            <div class="col-5-item">
+                                <li class="feature__img-item">
+                                    <img src="./assets/images/feature/vungtau.png" alt="VungTau">
+                                    <div class="feaature__img-info">
+                                        <h2 class="feature__img-city">Vũng Tàu</h2>
+                                        <p class="feature__img-accommodation">
+                                            2811 Chỗ ở
+                                        </p>
+                                    </div>
+                                </li>
+                            </div>
+                            <div class="col-5-item">
+                                <li class="feature__img-item">
+                                    <img src="./assets/images/feature/dalat.png" alt="Da Lat">
+                                    <div class="feaature__img-info">
+                                        <h2 class="feature__img-city">Đà Lạt</h2>
+                                        <p class="feature__img-accommodation">
+                                            2811 Chỗ ở
+                                        </p>
+                                    </div>
+                                </li>
+                            </div>
+                            <div class="col-5-item">
+                                <li class="feature__img-item">
+                                    <img src="./assets/images/feature/danang.png" alt="Da Nang">
+                                    <div class="feaature__img-info">
+                                        <h2 class="feature__img-city">Đà Nẵng</h2>
+                                        <p class="feature__img-accommodation">
+                                            2811 Chỗ ở
+                                        </p>
+                                    </div>
+                                </li>
+                            </div>
+                            <div class="col-5-item">
+                                <li class="feature__img-item">
+                                    <img src="./assets/images/feature/quangninh.png" alt="Quang Ninh">
+                                    <div class="feaature__img-info">
+                                        <h2 class="feature__img-city">Quảng Ninh</h2>
+                                        <p class="feature__img-accommodation">
+                                            2811 Chỗ ở
+                                        </p>
+                                    </div>
+                                </li>
+                            </div>
+                            <div class="col-5-item">
+                                <li class="feature__img-item">
+                                    <img src="./assets/images/feature/hoian.png" alt="hoi An">
+                                    <div class="feaature__img-info">
+                                        <h2 class="feature__img-city">Hộ An</h2>
+                                        <p class="feature__img-accommodation">
+                                            2811 Chỗ ở
+                                        </p>
+                                    </div>
+                                </li>
+                            </div>
+                            <div class="col-5-item">
+                                <li class="feature__img-item">
+                                    <img src="./assets/images/feature/nhatrang.png" alt="Nha Trang">
+                                    <div class="feaature__img-info">
+                                        <h2 class="feature__img-city">Nha Trang</h2>
+                                        <p class="feature__img-accommodation">
+                                            2811 Chỗ ở
+                                        </p>
+                                    </div>
+                                </li>
+                            </div>
+                        </div>
+                    </ul>
+                    <div class="feature__img-action">
+                        <div class="slider-btn slider-btn-left">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                        <div class="slider-btn slider-btn--active slider-btn-right">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Section Featured -->
+
+            <!-- Start Section Promotion -->
+            <section class="promotion">
+                <div class="promotion__header">
+                    <h2 class="main-title">Ưu đãi độc quyền</h2>
+                    <p class="main-title__content promotion__content">Chỉ có tại Luxstay, hấp dẫn và hữu hạn, book
+                        ngay!<span>Xem thêm</span></p>
+                </div>
+                <ul class="promotion__list">
+                    <div class="row">
+                        <div class="col-3-item">
+                            <li class="promotion_item"><img src="./assets/images/promotion/1.jpg" alt=""></li>
+                        </div>
+                        <div class="col-3-item">
+                            <li class="promotion_item"><img src="./assets/images/promotion/2.jpg" alt=""></li>
+                        </div>
+                        <div class="col-3-item">
+                            <li class="promotion_item"><img src="./assets/images/promotion/3.jpg" alt=""></li>
+                        </div>
+                    </div>
+                </ul>
+
+            </section>
+            <!-- End Section Promotion -->
+
+            <!-- Start Section Suggestion  -->
+            <section class="suggestion">
+                <div class="suggestion__header">
+                    <h2 class="main-title">Gợi ý từ Luxstay</h2>
+                    <p class="main-title__content">Những địa điểm thường đến mà Luxstay gợi ý dành cho bạn</p>
+                </div>
+                <ul class="suggestion-list">
+                    <div class="row">
+                        <div class="col-4-item">
+                            <li class="suggestion-item">
+                                <div class="sugesstion-img">
+                                    <img src="./assets/images/suggestion/1.jpg" alt="">
+                                </div>
+                                <div class="sugesstion-content">
+                                    <h3 class="suggesstion__title">VI VU NGOẠI THÀNH HÀ NỘI</h3>
+                                    <p class="suggesstion__subtitle">Trải nghiệm không gian thoáng đãng cho chuyến
+                                        đi ngày gần địa điểm này!</p>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="col-4-item">
+                            <li class="suggestion-item">
+                                <div class="sugesstion-img">
+                                    <img src="./assets/images/suggestion/2.jpg" alt="">
+                                </div>
+                                <div class="sugesstion-content">
+                                    <h3 class="suggesstion__title">VI VU NGOẠI THÀNH HÀ NỘI</h3>
+                                    <p class="suggesstion__subtitle">Trải nghiệm không gian thoáng đãng cho chuyến
+                                        đi ngày gần địa điểm này!</p>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="col-4-item">
+                            <li class="suggestion-item">
+                                <div class="sugesstion-img">
+                                    <img src="./assets/images/suggestion/3.jpg" alt="">
+                                </div>
+                                <div class="sugesstion-content">
+                                    <h3 class="suggesstion__title">VI VU NGOẠI THÀNH HÀ NỘI</h3>
+                                    <p class="suggesstion__subtitle">Trải nghiệm không gian thoáng đãng cho chuyến
+                                        đi ngày gần địa điểm này!</p>
+                                </div>
+                            </li>
+                        </div>
+                        <div class="col-4-item">
+                            <li class="suggestion-item">
+                                <div class="sugesstion-img">
+                                    <img src="./assets/images/suggestion/4.jpg" alt="">
+                                </div>
+                                <div class="sugesstion-content">
+                                    <h3 class="suggesstion__title">VI VU NGOẠI THÀNH HÀ NỘI</h3>
+                                    <p class="suggesstion__subtitle">Trải nghiệm không gian thoáng đãng cho chuyến
+                                        đi ngày gần địa điểm này! Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Nam, sequi.</p>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="suggestion-action">
+                        <button class="slider-btn slider-btn-left">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-btn slider-btn--active slider-btn-right">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </ul>
+            </section>
+            <!-- End Section Suggestion  -->
+
+            <!-- Start Section guild -->
+            <section class="guild">
+                <div class="guild__header">
+                    <h2 class="main-title">Hướng dẫn sử dụng</h2>
+                    <p class="main-title__content">Đặt chỗ nhanh, thanh toán đơn giản, sử dụng dễ dàng</p>
+                </div>
+                <ul class="guild__list">
+                    <div class="row">
+                        <div class="col-3-item">
+                            <li class="guild__item">
+                                <img src="./assets/images/suggestion/11.jpg" alt="">
+                            </li>
+                        </div>
+                        <div class="col-3-item">
+                            <li class="guild__item">
+                                <img src="./assets/images/suggestion/22.jpg" alt="">
+                            </li>
+                        </div>
+                        <div class="col-3-item">
+                            <li class="guild__item">
+                                <img src="./assets/images/suggestion/33.jpg" alt="">
+                            </li>
+                        </div>
+                        <div class="col-3-item">
+                            <li class="guild__item">
+                                <img src="./assets/images/suggestion/44.jpg" alt="">
+                            </li>
+                        </div>
+                        <div class="col-3-item">
+                            <li class="guild__item">
+                                <img src="./assets/images/suggestion/55.jpg" alt="">
+                            </li>
+                        </div>
+                    </div>
+                    <div class="guild-action">
+                        <button class="slider-btn slider-btn-left">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-btn slider-btn--active slider-btn-right">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </ul>
+            </section>
+            <!-- End Section guild -->
+        </section>
+    </div>
+
+    <div id="modal"></div>
+
+    <!-- Script -->
+    <script src="./action/header/index.js"></script>
+    <script src="./action/slider/index.js"></script>
+</body>
+
+</html>

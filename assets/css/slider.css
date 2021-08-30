@@ -1,0 +1,45 @@
+.slide-bar {
+  width: 100%;
+  /* background-color: turquoise; */
+  margin-top: var(--header-height);
+  padding: 45px 0;
+}
+
+.slide-container {
+  width: 1200px;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #ccc;
+}
+
+.slider__imgs-btn > span > i {
+  font-size: 0.7rem;
+  color: #666;
+  opacity: 0.5;
+}
+
+.slider__imgs-btn > span.active > i {
+  opacity: 1;
+}
+
+.slider__imgs {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+}
+
+.slider__imgs > img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: translateX(-100%);
+}
+
+.slider__imgs-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
